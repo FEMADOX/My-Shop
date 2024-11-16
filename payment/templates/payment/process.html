@@ -15,10 +15,11 @@
     </thead>
     <tbody>
       {% for item in order.items.all %}
+        {% comment %} <tr class="row {% cycle '1''2' %}"> RABBITMQ and CELERY {% endcomment %}
         <tr class="row">
           <td>
-            <img src="{% if item.product.image %}{{item.product.image.url}}{% else %}
-            {% static 'img/no_image.png' %}{% endif %}" alt="">
+            <img src="{% if item.product.image %}{{item.product.image.url}}
+            {% else %}{% static 'img/no_image.png' %}{% endif %}" alt="">
           </td>
           <td>{{item.product.name}}</td>
           <td class="num">{{item.price}}</td>
