@@ -5,7 +5,6 @@ from django.urls import reverse
 from cart.cart import Cart
 from orders.forms import OrderCreateForm
 from orders.models import Order, OrderItem
-from orders.tasks import order_created
 
 # Create your views here.
 
